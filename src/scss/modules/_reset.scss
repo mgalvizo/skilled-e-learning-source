@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    border: 0;
+}
+
+html {
+    width: 100%;
+    font-size: 62.5%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
