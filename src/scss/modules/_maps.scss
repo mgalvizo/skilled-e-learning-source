@@ -1,0 +1,28 @@
+$font-weights: (
+    'medium': 500,
+    'bold': 700,
+    'extra-bold': 800,
+);
+
+$heading-size: (
+    'small': 2.4rem,
+    'medium': 3.2rem,
+    'large': 4rem,
+    'xlarge': 5.6rem,
+);
+
+$heading-height: (
+    'small': 2.8rem,
+    'medium': 4rem,
+    'large': 5.1rem,
+    'xlarge': 7rem,
+);
+
+$media-map: (
+    // 375px
+    'mobile': 23.438em,
+    // 768px
+    'tablet': 48em,
+    // 1440px
+    'desktop': 90em
+);
