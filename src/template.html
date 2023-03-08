@@ -4,23 +4,137 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="images/favicon-32x32.png"
-        />
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,700;0,800;1,500;1,700;1,800&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,700;0,800;1,500;1,700;1,800&display=swap" rel="stylesheet" />
         <title>Frontend Mentor | Skilled e-learning landing page</title>
     </head>
     <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <header>
+            <section class="logo-cta stripe">
+                <div class="stripe-content">
+                    <span class="logo">
+                        <img src="images/logo-dark.svg" alt="skilled" loading="lazy" />
+                    </span>
+                    <div class="btn-container">
+                        <a class="btn btn--primary" href="#">Get Started</a>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="hero stripe">
+                <div class="stripe-content">
+                    <div class="two-column">
+                        <div class="col col-left">
+                            <div class="col-content">
+                                <h1><span>Maximize skill,</span><span>minimize budget</span></h1>
+                                <p>Our modern courses across a range of in-demand skills will give you the knowledge you need to live the life you want.</p>
+                                <div class="btn-container">
+                                    <a class="btn btn--cta" href="#">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-right">
+                            <div class="col-content">
+                                <picture>
+                                    <source
+                                        type="image/webp"
+                                        media="(min-width: 900px)"
+                                        srcset="images/image-hero-desktop.webp, images/image-hero-desktop@2x.webp 2x"
+                                    />
+                                    <source
+                                        type="image/png"
+                                        media="(min-width: 900px)"
+                                        srcset="images/image-hero-desktop.png, images/image-hero-desktop@2x.png 2x"
+                                    />
+                                    <source
+                                        type="image/webp"
+                                        media="(min-width: 620px)"
+                                        srcset="images/image-hero-tablet.webp, images/image-hero-tablet@2x.webp 2x"
+                                    />
+                                    <source
+                                        type="image/png"
+                                        media="(min-width: 620px)"
+                                        srcset="images/image-hero-tablet.png, images/image-hero-tablet@2x.png 2x"
+                                    />
+                                    <source
+                                        media="(min-width: 0)"
+                                        type="image/webp"
+                                        srcset="images/image-hero-mobile.webp, images/image-hero-mobile@2x.webp 2x"
+                                    />
+                                    <source media="(min-width: 0)" type="image/png" srcset="images/image-hero-mobile.png, images/image-hero-mobile@2x.png 2x" />
+                                    <img src="images/image-hero-desktop.png" alt="A young woman about to take a sip of coffee" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="courses stripe">
+                <div class="stripe-content">
+                    <div class="box box-1">
+                        <h2 class="box-title">Check out our most popular courses!</h2>
+                    </div>
+                    <div class="course course-1">
+                        <img src="images/icon-animation.svg" alt="Glyph of a person running" />
+                        <h3 class="course-title">Animation</h3>
+                        <p class="course-description">Learn the latest animation techniques to create stunning motion design and captivate your audience.</p>
+                        <div class="course-link-container">
+                            <a class="course-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="course course-2">
+                        <img src="images/icon-design.svg" alt="Glyph of a person running" />
+                        <h3 class="course-title">Design</h3>
+                        <p class="course-description">Create beautiful, usable interfaces to help shape the future of how the web looks.</p>
+                        <div class="course-link-container">
+                            <a class="course-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="course course-3">
+                        <img src="images/icon-photography.svg" alt="Glyph of a person running" />
+                        <h3 class="course-title">Photography</h3>
+                        <p class="course-description">Explore critical fundamentals like lighting, composition, and focus to capture exceptional photos.</p>
+                        <div class="course-link-container">
+                            <a class="course-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="course course-4">
+                        <img src="images/icon-crypto.svg" alt="Glyph of a person running" />
+                        <h3 class="course-title">Crypto</h3>
+                        <p class="course-description">
+                            All you need to know to get started investing in crypto. Go from beginner to advanced with this 54 hour course.
+                        </p>
+                        <div class="course-link-container">
+                            <a class="course-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="course course-5">
+                        <img src="images/icon-business.svg" alt="Glyph of a person running" />
+                        <h3 class="course-title">Business</h3>
+                        <p class="course-description">
+                            A step-by-step playbook to help you start, scale, and sustain your business without outside investment.
+                        </p>
+                        <div class="course-link-container">
+                            <a class="course-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="logo-cta stripe">
+                <div class="stripe-content">
+                    <span class="logo">
+                        <img src="images/logo-light.svg" alt="skilled" loading="lazy" />
+                    </span>
+                    <div class="btn-container">
+                        <a class="btn btn--secondary" href="#">Get Started</a>
+                    </div>
+                </div>
+            </section>
+        </footer>
     </body>
 </html>

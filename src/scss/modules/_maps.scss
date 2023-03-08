@@ -5,6 +5,7 @@ $font-weights: (
 );
 
 $heading-size: (
+    'xsmall': 2rem,
     'small': 2.4rem,
     'medium': 3.2rem,
     'large': 4rem,
@@ -12,6 +13,7 @@ $heading-size: (
 );
 
 $heading-height: (
+    'xsmall': 2.4rem,
     'small': 2.8rem,
     'medium': 4rem,
     'large': 5.1rem,
@@ -19,10 +21,18 @@ $heading-height: (
 );
 
 $media-map: (
-    // 375px
-    'mobile': 23.438em,
+    // 320px
+    'min': 20em,
+    // 480px
+    'tablet': 30em,
+    // 620px
+    'tablet-sm-desktop': 38.75em,
     // 768px
-    'tablet': 48em,
+    'small-desktop': 48em,
+    // 900px
+    'sm-lg-desktop': 56.25em,
+    // 1024px
+    'large-desktop': 64em,
     // 1440px
-    'desktop': 90em
+    'max': 90em
 );

@@ -1,3 +1,358 @@
 @use 'modules/reset';
 @use 'modules/variables';
 @use 'modules/maps';
+
+body {
+    padding-top: 16px;
+    background-color: variables.$white;
+    color: variables.$secondary-color;
+    font-family: variables.$website-font;
+    font-weight: map-get(maps.$font-weights, 'medium');
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+a:visited,
+a:link {
+    color: variables.$accent-color;
+    font-weight: map-get(maps.$font-weights, 'bold');
+    text-decoration: none;
+
+    &:hover {
+        color: variables.$accent-color-hover;
+    }
+}
+
+a.btn {
+    display: inline-block;
+    line-height: 1.75;
+    color: variables.$white;
+    font-weight: map-get(maps.$font-weights, 'bold');
+    padding: 14px 32px;
+    border-radius: variables.$button-border-radius;
+    text-align: center;
+
+    &.btn--primary {
+        background-color: variables.$primary-color;
+
+        &:hover {
+            background-color: variables.$primary-color-hover;
+        }
+    }
+
+    &.btn--cta {
+        background-color: variables.$accent-color;
+        background-image: variables.$gradient-1;
+
+        &:hover {
+            background-image: variables.$gradient-1-hover;
+        }
+    }
+
+    &.btn--secondary {
+        background-image: variables.$gradient-2;
+
+        &:hover {
+            background-image: variables.$gradient-2-hover;
+        }
+    }
+
+    &:hover {
+        color: variables.$white;
+    }
+}
+
+header {
+    .stripe-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: variables.$primary-color;
+    font-weight: map-get(maps.$font-weights, 'extra-bold');
+}
+
+main {
+    padding-top: 38px;
+}
+
+.stripe {
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+
+    .stripe-content {
+        flex-basis: variables.$max-content-width;
+    }
+}
+
+.hero {
+    img {
+        width: 100%;
+        max-width: 435px;
+    }
+
+    h1 {
+        font-size: map-get(maps.$heading-size, 'large');
+        line-height: map-get(maps.$heading-height, 'large');
+        margin-bottom: 26px;
+
+        span {
+            display: block;
+        }
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+
+    .col-right {
+        text-align: center;
+    }
+}
+
+.courses {
+    padding-bottom: 85px;
+    background-image: variables.$gradient-3;
+
+    .stripe-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(5, 1fr);
+        row-gap: 40px;
+    }
+
+    .box,
+    .course {
+        border-radius: variables.$box-border-radius;
+    }
+
+    .box-1 {
+        background-image: variables.$gradient-1;
+        padding: 24px 28px 32px;
+
+        .box-title {
+            font-size: map-get(maps.$heading-size, 'small');
+            line-height: map-get(maps.$heading-height, 'small');
+            color: variables.$white;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .course {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 56px 28px 32px;
+        background-color: variables.$white;
+        box-shadow: variables.$box-drop-shadow;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(28px, -50%);
+        }
+
+        .course-title {
+            font-size: map-get(maps.$heading-size, 'xsmall');
+            line-height: map-get(maps.$heading-height, 'xsmall');
+            margin-bottom: 16px;
+        }
+
+        .course-description {
+            margin-bottom: 24px;
+        }
+
+        .course-link-container {
+            margin-top: auto;
+        }
+
+        .course-link {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+footer {
+    padding: 32px 0;
+    background-color: variables.$primary-color;
+
+    .stripe-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/*
+// T A B L E T - S M D E S K T O P
+*/
+
+@media only screen and (min-width: map-get(maps.$media-map, 'tablet-sm-desktop')) {
+    body {
+        padding-top: 24px;
+    }
+
+    main {
+        padding-top: 50px;
+    }
+
+    .stripe {
+        padding: 0 40px;
+    }
+
+    .hero {
+        padding-bottom: 90px;
+
+        img {
+            width: auto;
+            max-width: 695px;
+        }
+
+        .two-column {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-basis: 50%;
+        }
+
+        .col-left {
+            min-height: 420px;
+        }
+
+        .col-right {
+            position: relative;
+
+            .col-content {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(47.2%, -58.7%);
+                z-index: -1;
+            }
+        }
+    }
+
+    .courses {
+        padding-bottom: 85px;
+
+        .stripe-content {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            column-gap: 10px;
+            row-gap: 56px;
+        }
+
+        .box-1,
+        .course {
+            padding: 56px 32px 32px;
+        }
+    }
+}
+
+/*
+// S M D E S K T O P - L G D E S K T O P
+*/
+
+@media only screen and (min-width: map-get(maps.$media-map, 'sm-lg-desktop')) {
+    main {
+        padding-top: 55px;
+    }
+
+    .hero {
+        padding-bottom: 135px;
+
+        img {
+            max-width: 1046px;
+        }
+
+        .col-left {
+            min-height: 560px;
+        }
+
+        .col-right {
+            .col-content {
+                transform: translate(47.32%, -63.3%);
+            }
+        }
+    }
+}
+
+/*
+// L A R G E D E S K T O P
+*/
+
+@media only screen and (min-width: map-get(maps.$media-map, 'large-desktop')) {
+    header,
+    main,
+    footer {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        p {
+            padding-right: 0;
+        }
+
+        h1 {
+            font-size: map-get(maps.$heading-size, 'xlarge');
+            line-height: map-get(maps.$heading-height, 'xlarge');
+            margin-bottom: 30px;
+        }
+    }
+
+    .courses {
+        padding-bottom: 140px;
+
+        .stripe-content {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 30px;
+        }
+
+        .box-1 {
+            .box-title {
+                font-size: map-get(maps.$heading-size, 'medium');
+                line-height: map-get(maps.$heading-height, 'medium');
+            }
+        }
+
+        .course {
+            .course-title {
+                font-size: map-get(maps.$heading-size, 'small');
+                line-height: map-get(maps.$heading-height, 'small');
+                margin-bottom: 24px;
+            }
+        }
+
+        .box-1,
+        .course {
+            padding: 64px 32px 32px;
+        }
+    }
+}

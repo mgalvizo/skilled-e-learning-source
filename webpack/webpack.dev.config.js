@@ -73,7 +73,7 @@ module.exports = merge(common, {
             },
             // Support images letting webpack decide between data url or file
             {
-                test: /\.(png|jpg|svg)$/,
+                test: /\.(png|jpg|svg|webp)$/,
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
