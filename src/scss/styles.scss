@@ -3,7 +3,6 @@
 @use 'modules/maps';
 
 body {
-    padding-top: 16px;
     background-color: variables.$white;
     color: variables.$secondary-color;
     font-family: variables.$website-font;
@@ -88,6 +87,12 @@ main {
     padding-top: 38px;
 }
 
+.body-content {
+    padding-top: 16px;
+    /* Setting overflow to hidden on a custom div because setting overflow in the body and the html tags will be ignored in mobile devices */
+    overflow: hidden;
+}
+
 .stripe {
     width: 100%;
     padding: 0 16px;
@@ -100,11 +105,6 @@ main {
 }
 
 .hero {
-    img {
-        width: 100%;
-        max-width: 435px;
-    }
-
     h1 {
         font-size: map-get(maps.$heading-size, 'large');
         line-height: map-get(maps.$heading-height, 'large');
@@ -206,7 +206,7 @@ footer {
 */
 
 @media only screen and (min-width: map-get(maps.$media-map, 'tablet-sm-desktop')) {
-    body {
+    .body-content {
         padding-top: 24px;
     }
 
@@ -222,16 +222,16 @@ footer {
         padding-bottom: 90px;
 
         img {
-            width: auto;
-            max-width: 695px;
+            width: 695px;
+            max-width: none;
         }
 
         .two-column {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 10px;
         }
 
         .col {
@@ -288,7 +288,7 @@ footer {
         padding-bottom: 135px;
 
         img {
-            max-width: 1046px;
+            width: 1046px;
         }
 
         .col-left {
