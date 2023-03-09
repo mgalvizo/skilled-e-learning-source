@@ -281,11 +281,19 @@ footer {
 
 @media only screen and (min-width: map-get(maps.$media-map, 'sm-lg-desktop')) {
     main {
-        padding-top: 55px;
+        padding-top: 85px;
     }
 
     .hero {
         padding-bottom: 135px;
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 40px;
+        }
 
         img {
             width: 1046px;
@@ -297,7 +305,7 @@ footer {
 
         .col-right {
             .col-content {
-                transform: translate(47.32%, -63.3%);
+                transform: translate(47.32%, -63.33%);
             }
         }
     }
@@ -315,14 +323,14 @@ footer {
     }
 
     .hero {
-        p {
-            padding-right: 0;
-        }
-
         h1 {
             font-size: map-get(maps.$heading-size, 'xlarge');
             line-height: map-get(maps.$heading-height, 'xlarge');
             margin-bottom: 30px;
+        }
+
+        p {
+            max-width: 80%;
         }
     }
 
@@ -333,6 +341,7 @@ footer {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             column-gap: 30px;
+            row-gap: 80px;
         }
 
         .box-1 {
