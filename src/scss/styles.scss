@@ -90,7 +90,7 @@ main {
 .body-content {
     padding-top: 16px;
     /* Setting overflow to hidden on a custom div because setting overflow in the body and the html tags will be ignored in mobile devices */
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .stripe {

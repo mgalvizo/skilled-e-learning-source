@@ -4,19 +4,15 @@ This is a solution to the [Skilled e-learning landing page challenge on Frontend
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
 
 ## Overview
 
@@ -24,88 +20,106 @@ This is a solution to the [Skilled e-learning landing page challenge on Frontend
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+-   View the optimal layout depending on their device's screen size
+-   See hover states for interactive elements
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Mobile
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![](./screenshots/mobile.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+#### Tablet
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+![](./screenshots/tablet.png)
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+#### Desktop
+
+![](./screenshots/desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   [Solution URL](https://your-solution-url.com)
+-   [Live Site URL](https://mgalvizo.github.io/skilled-e-learning/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+-   Semantic HTML5 markup
+-   SASS/SCSS
+-   Flexbox
+-   CSS Grid
+-   Mobile-first approach
+-   Responsive Images
+-   Webpack Bundler
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+Adding responsive images depending on the media breakpoint and device pixel density.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<picture
+    ><source
+        media="(min-width: 900px)"
+        srcset="
+            ./images/image-hero-desktop.5ff1ed24971b3e97da4c.webp,
+            ./images/image-hero-desktop@2x.25ffcd4b177a3a1b3a65.webp 2x
+        "
+        type="image/webp" />
+    <source
+        media="(min-width: 620px)"
+        srcset="
+            ./images/image-hero-tablet.9e41de0ef52adc1d1a7b.webp,
+            ./images/image-hero-tablet@2x.3e8ba85556be1b6fb054.webp 2x
+        "
+        type="image/webp" />
+    <source
+        media="(min-width: 320px)"
+        srcset="
+            ./images/image-hero-mobile.921f38ceee7630fec664.webp,
+            ./images/image-hero-mobile@2x.9cbaa09811b2e23ef944.webp 2x
+        "
+        type="image/webp" />
+    <source
+        media="(min-width: 900px)"
+        srcset="
+            ./images/image-hero-desktop.e8bce1383147db84fc45.png,
+            ./images/image-hero-desktop@2x.d426743354778e661bd8.png 2x
+        "
+        type="image/png" />
+    <source
+        media="(min-width: 620px)"
+        srcset="
+            ./images/image-hero-tablet.0384d40b5df2aa02d25d.png,
+            ./images/image-hero-tablet@2x.153ddf792e760c0fec63.png 2x
+        "
+        type="image/png" />
+    <source
+        media="(min-width: 320px)"
+        srcset="
+            ./images/image-hero-mobile.754036c7a2aa1ffdf3d9.png,
+            ./images/image-hero-mobile@2x.3c62c211fe4ac449f02c.png 2x
+        "
+        type="image/png" />
+    <img
+        src="./images/image-hero-mobile.754036c7a2aa1ffdf3d9.png"
+        alt="A young woman about to take a sip of coffee"
+/></picture>
 ```
+
+Using overflow-x in a div since it will be ignored in mobile devices when adding the property to the body or html tags.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.body-content {
+    overflow-x: hidden;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+-   [Responsive Images MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - This helped me with the hero section of the project to add the proper HTML for the responsive images to work.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+-   Frontend Mentor - [@mgalvizo](https://www.frontendmentor.io/profile/mgalvizo)
