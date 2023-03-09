@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
--   [Solution URL](https://your-solution-url.com)
+-   [Solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-using-sass-flexbox-grid-and-webpack-bundler-LpR3eI6iIp)
 -   [Live Site URL](https://mgalvizo.github.io/skilled-e-learning/)
 
 ## My process
